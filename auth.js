@@ -1,4 +1,4 @@
- // auth.js
+ 
 const API_URL = 'https://nestmart-api-core.lovable.app/api/public';
 
 function initAuth() {
@@ -22,20 +22,19 @@ function initAuth() {
 async function handleRegister(e) {
     e.preventDefault();
     console.log('[auth.js] Register submit bosildi');
-
     const name = document.getElementById('reg-name')?.value?.trim();
     const email = document.getElementById('reg-email')?.value?.trim();
     const password = document.getElementById('reg-password')?.value;
 
     console.log('[auth.js] Yuborilayotgan malumot:', { name, email, password: password ? '***' : null });
 
-    if (!name  !email  !password) {
+    if (!name || !email || !password) {
         alert("Iltimos, barcha maydonlarni to'ldiring");
         return;
     }
 
     try {
-        const res = await fetch(${API_URL}/auth/register, {
+        const res = await fetch("${API_URL}/auth/register" , {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email, password })
@@ -52,7 +51,7 @@ async function handleRegister(e) {
             alert("Ro'yxatdan o'tdingiz!");
             window.location.href = 'index.html';
         } else {
-            alert(data.message || Xatolik yuz berdi (status: ${res.status}));
+            alert(data.message || "Xatolik yuz berdi (status: ${res.status})");
         }
     } catch (err) {
         console.error('[auth.js] Fetch xatosi (register):', err);
@@ -75,7 +74,7 @@ async function handleLogin(e) {
     }
 
     try {
-        const res = await fetch(${API_URL}/auth/login, {
+        const res = await fetch("${API_URL}/auth/login" , {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
