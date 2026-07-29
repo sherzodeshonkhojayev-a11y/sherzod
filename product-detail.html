@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahsulot haqida batafsil</title>
+    <link rel="stylesheet" href="product-detail.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body> 
+<div class="product-detail-container">
+    <div class="product-main-info">
+        <div class="product-gallery">
+            <img id="mainImage" src="" alt="Product Image">
+        </div>
+        <div class="product-info-panel">
+            <h1 id="productTitle"></h1>
+            <div class="rating-reviews-count">
+                <span id="productRating">★ 4.7</span>
+                <span id="reviewsCount">518 sharh</span>
+            </div>
+            <div id="productPrice" class="price-tag"></div>
+            <button class="add-to-cart-btn">Savatga qo'shish</button>
+        </div>
+    </div>
+
+    <div class="reviews-section">
+        <h2>Sharhlar</h2>
+        <div id="reviewsList"></div>
+
+        <form id="reviewForm" class="review-form">
+            <h3>Sharh qoldirish</h3>
+            <input type="text" id="reviewerName" placeholder="Ismingiz" required />
+            <select id="reviewRating">
+                <option value="5">5 - Ajoyib</option>
+                <option value="4">4 - Yaxshi</option>
+                <option value="3">3 - O'rta</option>
+                <option value="2">2 - Yomon</option>
+                <option value="1">1 - Juda yomon</option>
+            </select>
+            <textarea id="reviewText" placeholder="Fikr va mulohazalaringizni yozing..." required></textarea>
+            <button type="submit">Sharh qo'shish</button>
+        </form>
+    </div>
+</div>
+    <script src="script.js"></script>
+    <script src="product-detail.js"></script>
+</body>
+</html>

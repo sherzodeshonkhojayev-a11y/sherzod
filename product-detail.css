@@ -1,0 +1,139 @@
+ /* product-detail.css */
+.product-detail-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: inherit;
+    color: #253d4e;
+}
+
+.product-main-info {
+    display: flex;
+    gap: 40px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+.product-gallery img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.product-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.product-info-panel h1 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.rating-reviews-count {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    color: #7e7e7e;
+}
+
+.rating-reviews-count span:first-child {
+    color: #f59e0b;
+    font-weight: 600;
+}
+
+.price-tag {
+    font-size: 28px;
+    font-weight: 700;
+    color: #3bb77e;
+}
+
+.add-to-cart-btn {
+    background-color: #3bb77e;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: max-content;
+    transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #2f9e6b;
+}
+
+.reviews-section {
+    margin-top: 40px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+.reviews-section h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.review-card {
+    border-bottom: 1px solid #f1f1f1;
+    padding: 15px 0;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.review-stars {
+    color: #f59e0b;
+}
+
+.review-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.review-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.review-form button {
+    background-color: #253d4e;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.review-form button:hover {
+    background-color: #1a2b38;
+}

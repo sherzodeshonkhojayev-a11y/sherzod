@@ -1,0 +1,199 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us — Nest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+<!-- ===================== HEADER (shared) ===================== -->
+<header class="site-header">
+  <div class="container header-top">
+    <a href="index.html" class="logo">Nest<span>.</span></a>
+
+    <form class="search-bar" onsubmit="return false;">
+      <input type="text" placeholder="Search for products, brands and more..." autocomplete="off" />
+      <button type="submit" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M21 21l-4.35-4.35M18 11a7 7 0 11-14 0 7 7 0 0114 0z" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="search-results" id="searchResults"></div>
+    </form>
+
+    <div class="header-actions">
+      <a href="#" class="icon-btn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7.5-4.7-10-9.3C.5 8 2.4 4.5 6 4.5c2.1 0 3.6 1.1 6 3.6 2.4-2.5 3.9-3.6 6-3.6 3.6 0 5.5 3.5 4 7.2C19.5 16.3 12 21 12 21z" stroke="#16241f" stroke-width="1.6"/></svg>
+      </a>
+      <a href="#" class="icon-btn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 4h2l2.4 12.2A2 2 0 009.36 18h7.28a2 2 0 001.96-1.6L20 8H6" stroke="#16241f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="21" r="1.4" fill="#16241f"/><circle cx="17" cy="21" r="1.4" fill="#16241f"/></svg>
+        <span class="badge">2</span>
+      </a>
+      <a href="#" class="icon-btn" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="#16241f" stroke-width="1.6"/><path d="M4.5 20c1.4-3.6 4.4-5.5 7.5-5.5s6.1 1.9 7.5 5.5" stroke="#16241f" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </a>
+      <a href="contact.html" class="btn btn-primary">Become a Seller</a>
+    </div>
+  </div>
+
+  <div class="container header-bottom">
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="#">Pages</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== HELP HERO ===================== -->
+<section class="help-hero">
+  <div class="container">
+    <span class="eyebrow">How can we help you?</span>
+    <h1>Let us know how we can help you</h1>
+
+    <div class="grid">
+      <div></div>
+      <div class="help-item">
+        <h3>01. Your Feedback</h3>
+        <p>Tell us what's working and what's not — every message goes straight to the product team.</p>
+        <h3>02. Billing Inquiries</h3>
+        <p>Questions about an order, invoice, or refund? Our billing team replies within one business day.</p>
+      </div>
+      <div class="help-item">
+        <h3>03. Employer Services</h3>
+        <p>Looking to sell on Nest or partner with us? Reach out and we'll set up a call.</p>
+        <h3>04. General Inquiries</h3>
+        <p>Anything else on your mind — we're happy to point you in the right direction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MAP ===================== -->
+<section class="map-section container">
+  <iframe
+    class="map-frame"
+    src="https://www.google.com/maps?q=Tashkent&output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Nest location map">
+  </iframe>
+</section>
+<!-- ===================== LOCATIONS ===================== -->
+<section class="locations-section">
+  <div class="container locations-grid">
+    <div class="location-card">
+      <h3>Office</h3>
+      <p>123 Market Street, Suite 400<br />Tashkent, Uzbekistan</p>
+      <a href="#" class="btn btn-outline">Get Direction</a>
+    </div>
+    <div class="location-card">
+      <h3>Studio</h3>
+      <p>45 Greenway Avenue<br />Tashkent, Uzbekistan</p>
+      <a href="#" class="btn btn-outline">Get Direction</a>
+    </div>
+    <div class="location-card">
+      <h3>Shop</h3>
+      <p>9 Harvest Lane, Ground Floor<br />Tashkent, Uzbekistan</p>
+      <a href="#" class="btn btn-outline">Get Direction</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DROP US A LINE ===================== -->
+<section class="contact-form-section">
+  <div class="container grid">
+    <div>
+      <span class="eyebrow">Get In Touch</span>
+      <h2 style="margin: 12px 0 24px;">Drop Us a Line</h2>
+
+      <form class="contact-form" novalidate>
+        <div class="field-row">
+          <div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" />
+          </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+998 90 123 45 67" />
+          </div>
+          <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="How can we help?" />
+          </div>
+        </div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message..."></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-status" role="status"></p>
+      </form>
+    </div>
+
+    <div class="contact-photo">
+      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop" alt="Customer support representative" />
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWSLETTER STRIP (shared) ===================== -->
+<section class="newsletter-section">
+  <div class="newsletter-copy">
+    <h2>Stay home &amp; get your daily needs from our shop</h2>
+  </div>
+  <form class="newsletter-form" novalidate>
+    <input type="email" placeholder="Your email address" required />
+    <button type="submit" class="btn btn-primary">Subscribe</button>
+  </form>
+</section>
+
+<!-- ===================== FOOTER (shared) ===================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Nest</h4>
+      <p>Fresh groceries, sourced locally and delivered to your door — every day of the week.</p>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <p>Get weekly deals and fresh arrivals straight to your inbox.</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Nest. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Service</span>
+  </div>
+</footer>
+
+<script src="contact.js"></script>
+</body>
+</html>

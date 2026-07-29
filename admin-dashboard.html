@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Yon panel -->
+        <aside>
+            <div>
+                <h2>Admin Panel</h2>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Asosiy</a></li>
+                    <li><a href="#products">Mahsulotlar</a></li>
+                    <li><a href="#orders">Buyurtmalar</a></li>
+                </ul>
+            </div>
+            <button class="logout-btn" id="logoutBtn">Chiqish</button>
+        </aside>
+
+        <!-- Asosiy qism -->
+        <main>
+            <header>
+                <h1>Xush kelibsiz, Admin!</h1>
+                <span id="adminName">Administrator</span>
+            </header>
+
+            <!-- Statistikalar -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Jami Mahsulotlar</h3>
+                    <p id="totalProducts">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Jami Savdolar</h3>
+                    <p id="totalSales">0 so'm</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Buyurtmalar Soni</h3>
+                    <p id="totalOrders">0</p>
+                </div>
+            </div>
+
+            <!-- Yangi mahsulot qo'shish formasi -->
+            <div class="content-section" id="products">
+                <h2>Yangi Mahsulot Qo'shish</h2>
+                <form id="productForm">
+                    <input type="text" id="prodName" placeholder="Mahsulot nomi" required>
+                    <input type="number" id="prodPrice" placeholder="Narxi (so'm)" required>
+                    <input type="number" id="prodStock" placeholder="Ombordagi miqdori" required>
+                    <button type="submit">Mahsulotni qo'shish</button>
+                </form>
+            </div>
+
+            <!-- Mahsulotlar ro'yxati -->
+            <div class="content-section">
+                <h2>Mavjud Mahsulotlar</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nomi</th>
+                            <th>Narxi</th>
+                            <th>Qoldiq</th>
+                            <th>Amallar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminProductTable">
+                        <!-- JS orqali to'ldiriladi -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+ <!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nest Mart & Grocery</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body>       
+    <header id="header"> 
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="./about-page/about.html">About Us</a>
+                <span class="divider">|</span>
+                <a href="./login.html">My Account</a>
+                <span class="divider">|</span>
+                <a href="./wishlist.html">Wishlist</a>
+                <span class="divider">|</span>
+                <a href="./admin-dashboard.html" class="admin-link" style="color: #3bb77e; font-weight: 600;">Admin Dashboard</a>
+                <span class="divider">|</span>
+                <a href="./sotuvchi-dashboard.html" class="seller-link" style="color: #3bb77e; font-weight: 600;">Seller Dashboard</a>
+            </div>
+            <div class="top-bar-middle">
+                100% Secure delivery without contacting the courier
+            </div>
+            <div class="top-bar-right">
+                <span>Need help? Call Us: <b class="highlight-phone">+1800900122</b></span>
+                <span class="divider">|</span>
+                <span class="lang-selector">English <i class="fa-solid fa-angle-down"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MIDDLE HEADER -->
+    <div class="middle-bar">
+        <div class="container">
+            
+            <!-- Logo -->
+            <div class="logo-box">
+                <div class="logo-text">
+                    <i class="fa-solid fa-leaf"></i>
+                    <span>Nest</span>
+                </div>
+                <div class="logo-subtext">Mart & Grocery</div>
+            </div>
+
+            <!-- Search -->
+            <input type="text" id="searchInput" placeholder="Search products..." />
+            <div id="loading" style="display: none;">Loading...</div>
+            <div id="resultsContainer"></div>
+
+            <!-- User Actions -->
+            <div class="user-actions">
+                <div class="action-item">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <span class="badge">0</span>
+                    <span class="action-text">Compare</span>
+                </div>
+                <div class="action-item">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="badge">0</span>
+                    <span class="action-text">Wishlist</span>
+                </div>
+                <div class="action-item">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge">0</span>
+                    <span class="action-text">Cart</span>
+                </div>
+                <div class="action-item" id="account-btn">
+                    <i class="fa-regular fa-user"></i>
+                    <a href="./login.html" class="action-text">Account</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BOTTOM HEADER -->
+    <div class="bottom-bar">
+
+        <div class="container">
+            
+            <div class="nav-left">
+                <button class="categories-btn">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Browse All Categories</span>
+                    <i class="fa-solid fa-angle-down" style="font-size: 11px;"></i>
+                </button>
+
+                 <div class="nav-links">
+                    <a href="#" class="hot-deals"><i class="fa-solid fa-fire"></i> Hot-deals</a>
+                    <a href="./about-page/about.html">about</a>
+                    <a href="./shop.html">Shop</a>
+                    <a href="#">Mega Menu <i class="fa-solid fa-angle-down" style="font-size: 10px;"></i></a>
+                    <a href="#">Vendors</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Pages <i class="fa-solid fa-angle-down" style="font-size: 10px;"></i></a>
+                    <a href="contact-page/contact.html" id="header-contact-link">contact</a>
+                 </div>
+                
+            </div>
+ 
+            <div class="support-box">
+                <i class="fa-solid fa-headset"></i>
+                <div>
+                    <div class="support-phone">1900 88 123</div>
+                    <div class="support-text">24/7 Support Center</div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</header>
+ <!-- section-1 -->
+  <section id="section-1"> 
+    <div class="container">
+
+        <div class="hero-banner">
+
+            <div class="hero-card">
+                 
+
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Fresh Vegetables <br> <span>Big discount</span>
+                    </h1>
+                    <p class="hero-subtitle">Sign up for the daily newsletter</p>
+                    
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required class="newsletter-input">
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+ 
+
+            </div>
+        </div>
+
+    </div>
+  </section>
+<!-- section-2 --> 
+   <div class="shop-container">
+    <div class="products-section">
+        <h2>Popular Products</h2>
+        <div id="products-grid" class="products-grid"></div>
+    </div>
+    
+    <div class="category-sidebar">
+        <h3>Category</h3>
+        <div id="category-list" class="category-list"></div>
+    </div>
+</div>
+
+<!-- cardga kirish -->
+ <div class="main-container">
+         <div class="category-list" id="category-list"></div>
+
+         <div class="products-grid" id="products-grid"></div>
+    </div>
+<!-- section-3 -->
+ <section id="section-3" class="deals-section">
+    <h2 class="section-title">Deals Of The Day</h2>
+    <div id="deals-grid" class="deals-grid">
+
+        </div>
+        
+</section>
+<section id="section-4" class="banners-container">
+    <div class="banner-card">
+        <h3>Everyday Fresh & Clean with Our Products</h3>
+        <button>Shop Now</button>
+    </div>
+    <div class="banner-card">
+        <h3>Make your Breakfast Healthy and Easy</h3>
+        <button>Shop Now</button>
+    </div>
+    <div class="banner-card">
+        <h3>The best Organic Products Online</h3>
+        <button>Shop Now</button>
+    </div>
+</section>
+
+<!-- section-4 -->
+ <div class="popular-products-section">
+    <div class="popular-header">
+        <h2>Popular Products</h2>
+        <div id="popularCategories" class="popular-categories-tabs"></div>
+    </div>
+    <div id="popularProductsGrid" class="popular-products-grid"></div>
+</div>
+  
+<!-- section-5 -->
+ <section id="section-6"> 
+    <div class="shop">
+      <div class="shop-left">
+        <h1>Stay home & get your daily
+needs from our shop</h1>
+        <p>Start Your Daily Shopping with Nest Mart</p>
+        <div class="shop-btn">
+          <input placeholder="Your email address" type="text">
+          <button>Subscribe</button>
+        </div>
+      </div>
+      <div class="shop-right">
+        <img src="./image/cbb9ee83513b85a44cc5ea8f28397b372c9433d8.png" alt="">
+      </div>
+    </div>
+ </section>
+ <!-- section-6 -->
+  <section id="section-7">
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-left">
+          <img src="./image/00f99915f5a4be9d4b4968dfc12432fa7f2026a7.png" alt="">
+        </div>
+        <div class="card-right">
+          <h4>Best prices & offers</h4>
+          <p>Orders $50 or more</p>
+        </div>
+      </div>
+
+        <div class="card">
+        <div class="card-left">
+          <img src="./image/959b9c17ff65b5221b3500f3bfd5adbf44f40d1e.png" alt="">
+        </div>
+        <div class="card-right">
+          <h4>Free delivery</h4>
+          <p>24/7 amazing services</p>
+        </div>
+      </div>
+
+        <div class="card">
+        <div class="card-left">
+          <img src="./image/3b96f6821be7b2f73d97a427ab087293e99578e3.png" alt="">
+        </div>
+        <div class="card-right">
+          <h4>Great daily deal</h4>
+          <p>When you sign up</p>
+        </div>
+      </div>
+
+        <div class="card">
+        <div class="card-left">
+          <img src=".//image/d72deffebd6b51605c9eb1421514ed34a53cf5a0.png" alt="">
+        </div>
+        <div class="card-right">
+          <h4>Wide assortment</h4>
+          <p>Mega Discounts</p>
+        </div>
+      </div>
+
+        <div class="card">
+        <div class="card-left">
+          <img src="./image/4009838c3cedc7fd3605bc361b67cc2e1a559223.png" alt="">
+        </div>
+        <div class="card-right">
+          <h4>Easy returns</h4>
+          <p>Within 30 days</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- footer -->
+   <footer id="footer" class="footer">
+    <div class="footer-container">
+        <!-- Logo va Kontakt -->
+        <div class="footer-column">
+            <img src="./image/205.png" alt="Nest Logo" class="logo">
+            <p>Awesome grocery store website template</p>
+            <p><strong>Address:</strong> 5171 W Campbell Ave undefined Kent, Utah 53127 United States</p>
+            <p><strong>Call Us:</strong> (+91) - 540-025-124553</p>
+            <p><strong>Email:</strong> sale@Nest.com</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+        </div>
+
+        <!-- Ustunlar -->
+        <div class="footer-column">
+            <h3>Company</h3>
+            <a href="/about">About Us</a>
+            <a href="/delivery">Delivery Information</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms & Conditions</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/support">Support Center</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Account</h3>
+            <a href="/login">Sign In</a>
+            <a href="/cart">View Cart</a>
+            <a href="/wishlist">My Wishlist</a>
+            <a href="/orders">Track My Order</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Corporate</h3>
+            <a href="/vendor">Become a Vendor</a>
+            <a href="/affiliate">Affiliate Program</a>
+            <a href="/careers">Farm Careers</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Popular</h3>
+            <a href="/milk">Milk & Flavoured Milk</a>
+            <a href="/butter">Butter and Margarine</a>
+            <a href="/eggs">Eggs Substitutes</a>
+        </div>
+
+        <!-- Install App va Social -->
+        <div class="footer-column">
+            <h3>Install App</h3>
+            <div class="app-links"> 
+              <a href="#">
+                <img src="./image/Margin.png" alt="">
+              </a>
+            </div>
+            <div class="social-links">
+                <p>Secured Payment Gateways</p>
+                <img src="./image/Container.png" alt=""> 
+            </div>
+        </div>
+    </div>
+</footer>
+
+<footer id="footer-2"> 
+<div class="footer-bottom">
+    <div class="copyright">
+        <p>© 2022 Nest - WordPress Ecommerce Template. All rights reserved.</p>
+    </div>
+    
+    <div class="hotline">
+        <p>1900646666</p>
+        <p>1900648888</p>
+    </div>
+    
+    <div class="social-follow">
+        <span>Follow Us</span>
+        <a href="https://facebook.com/profilingiz" target="_blank">FB</a>
+        <a href="https://twitter.com/profilingiz" target="_blank">TW</a>
+        <a href="https://instagram.com/profilingiz" target="_blank">IG</a>
+        <a href="https://pinterest.com/profilingiz" target="_blank">PN</a>
+    </div>
+</div>
+</footer>
+<div id="product-detail-page" style="display: none;"></div>        
+
+    <script src="app.js"></script>
+   
+</body>
+</html>

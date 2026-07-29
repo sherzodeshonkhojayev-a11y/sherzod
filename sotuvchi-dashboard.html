@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Sotuvchi Dashboard (POS)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Yon panel -->
+        <aside>
+            <div>
+                <h2>Sotuvchi Panel</h2>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Kassa (POS)</a></li>
+                </ul>
+            </div>
+            <button class="logout-btn" id="logoutBtn">Chiqish</button>
+        </aside>
+
+        <!-- Asosiy qism -->
+        <main>
+            <header>
+                <h1>Tezkor Savdo (POS)</h1>
+                <span id="sellerName">Sotuvchi</span>
+            </header>
+
+            <div style="display: flex; gap: 20px;">
+                <!-- Mahsulotlar tanlash qismi -->
+                <div class="content-section" style="flex: 2;">
+                    <h2>Mahsulotlar</h2>
+                    <input type="text" id="searchProd" placeholder="Mahsulot qidirish..." style="margin-bottom: 15px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nomi</th>
+                                <th>Narxi</th>
+                                <th>Qoldiq</th>
+                                <th>Amal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sellerProductTable">
+                            <!-- JS orqali to'ldiriladi -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Savatcha qismi -->
+                <div class="content-section" style="flex: 1;">
+                    <h2>Savatcha</h2>
+                    <ul id="cartList" style="list-style: none; margin-bottom: 15px; max-height: 200px; overflow-y: auto;">
+                        <!-- Savatcha elementlari -->
+                    </ul>
+                    <h3>Jami: <span id="cartTotal">0</span> so'm</h3>
+                    <button id="checkoutBtn" style="width: 100%; margin-top: 15px; background-color: #3498db;">Sotishni Yakunlash</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
